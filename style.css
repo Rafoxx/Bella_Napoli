@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    background-color: #D2B48C;
+}
+
+header {
+    background-color:#800000;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+header h1 {
+    color: #D2B48C;
+    background-color: #800000 ;
+    font-size: 50px;
+}
+
+#carrosel img {
+    height: 600px;
+    padding: 20px;
+    margin-bottom: 100px;
+}
+
+nav ul {
+    display: flex;
+    text-align: center;
+    background-color:#800000;
+}
+
+ul li {
+    display: flex;
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+ul li a {
+    background-color:#800000;
+    display: flex;
+    text-decoration: none;
+    font-size: 22px;
+    color:#D2B48C;
+}
+
+ul li a:hover {
+    color: black;
+}
+
+h2 {
+    color: #800000;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+form {
+    margin: 0 35%;
+    display: block;
+    margin-bottom: 50px
+}
+
+input {
+    height: 24px;
+    width: 400px;
+    border: 1px solid black;
+}
+
+button {
+    background-color:#800000;
+    color: #D2B48C;
+    cursor: pointer;
+    height: 34px;
+    width: 400px;
+    border: 2px solid black;
+    font-weight: bold;
+}
+
+
+button:hover {
+    background-color: brown;
+}
+
+#cardapio img {
+    width: 500px;
+}
+
+#cardapio ul li {
+    display:inline-block ;
+    padding: 10px 95px;
+    margin-bottom: 40px;
+}
+
+p,strong {
+    color: #800000;
+    font-size: 20px;
+}
+
+#cardapio ul button {
+    width: 200px;
+}
+
+#cadastro {
+    flex-basis: 20%;
+}
+
+form input {
+    background-color: #ae0606;
+    color: #D2B48C;
+}
+
+img {
+    width:300px;
+}
+
+

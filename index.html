@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>--- Bella Napoli ---</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <h1>Pizzaria Bella Napoli</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#cadastro">Home</a>
+                </li>
+                <li>
+                    <a href="#cardapio">Cadápio</a>
+                </li>
+                <li>
+                    <a href="sobre.html">Sobre Nós</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="carrosel">
+        <img src="./imagens/portugueza.jpeg" alt="pizza portuguesa">
+        <img src="./imagens/4queijos.jpeg" alt="pizza Quatro Queijos">
+        <img src="./imagens/calabresa.jpeg" alt="pizza calabresa">
+        <img src="./imagens/muçarela.jpeg" alt="pizza muçarela">
+    </div>
+
+
+        <section id="cardapio">
+            <ul>
+                <li>
+                    <h2>Portugueza</h2>
+                    <img src="./imagens/portugueza.jpeg" alt="pizza portugueza">
+                    <p>Preço:30,00R$
+                    <button>comprar</button>
+                </li>
+                <li>
+                    <h2>Calabresa</h2>
+                    <img src="imagens/calabresa.jpeg" alt="pizza calabresa">
+                    <p>Preço:30,00R$</p>
+                    <button>comprar</button>
+                </li>
+                <li>
+                    <h2>Muçarela</h2>
+                    <img src="./imagens/muçarela.jpeg" alt="pizza muçarela">
+                    <p>Preço:30,00R$</p>
+                    <button>comprar</button>
+                </li>
+                <li>
+                    <h2>Quatro Queijos</h2>
+                    <img src="./imagens/4queijos.jpeg" alt="pizza Quatro Queijos">
+                    <p>Preço:30,00R$</p>
+                    <button>comprar</button>
+                </li>
+            </ul>
+        </section>
+
+        <section id="cadastro">
+            <form>
+                <h2>Cadastro</h2>
+                <input type="text" placeholder="Nome Completo:" required>
+                <input type="email" placeholder="Seu Email:" required>
+                <input id="tel" type="tel" placeholder="Seu Telefone:">
+                <input id="cpf" type="tel" placeholder="Seu CPF:" required>
+                <input type="text" placeholder="Seu Endereço" required>
+                <input id="cep" type="tel" placeholder="Seu CEP:" required>
+                <button type="submit">cadastrar</button>
+            </form>
+        </section>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./main.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./jquery.plugin/jquery.mask.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#carrosel').slick({
+                autoplay:true,
+                autoplayspeed: 2,
+                arrows:false
+            })
+            $('#tel').mask('(00) 00000-0000');
+            $('#cpf').mask('000.000.000-00');
+            $('#cep').mask('00000-000');
+
+            $('#cardapio button').click(function(){
+                const destino = $('#cadastro');
+
+                $('html').animate({
+                    scrollTop: destino.offset().top
+                },1000)
+            })
+        });
+    </script>
+</body>
+</html>
